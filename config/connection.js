@@ -1,3 +1,5 @@
+// This file is  our connection to our SQL database 
+
 // import the Sequelize constructor from the library
 const Sequelize = require('sequelize');
 

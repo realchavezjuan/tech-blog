@@ -1,3 +1,43 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: rgb(67, 66, 66);
+    color: rgb(222, 222, 222);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
+
+#nav a {
+    padding: 0 10px;
+	justify-content: space-between;
+}
+
+a { 
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+} 
+
+a:hover {
+    color: #3486eb;
+}
+
 footer {
-    background-color: rgb(252, 252, 57);
+    border-top: 3px solid rgb(67, 66, 66);
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+    font-weight: bold;
+    color:rgb(67, 66, 66)
 }
