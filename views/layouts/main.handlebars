@@ -15,9 +15,14 @@
         <a href="/">Tech Blog</a>
       </h1>
       <navigation id="nav">
-          <a href="/login">LOGIN</a>
+          {{#if loggedIn}}
+          <span>{{ username }}'s account</span>
+          <a href="/">HOMEPAGE</a>
           <a href="/dashboard">DASHBOARD</a>
-          <a href="/homepage">HOMEPAGE</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">LOGIN</a>
+          {{/if}}
       </navigation>
     </header>
     <main>
@@ -27,7 +32,9 @@
       Created by Juan C Chavez
     </footer>
   </div>
-
+  {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

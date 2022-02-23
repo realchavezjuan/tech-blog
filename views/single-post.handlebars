@@ -1,0 +1,34 @@
+{{!-- gives use access to post data --}}
+{{!-- {{ post }} --}}
+{{!-- the post --}}
+<article class="post">
+    <div class="title">
+    <span>{{post.title}}</span>
+    <span>{{post.post_url}}</span>
+    </div>
+    <div class="meta">
+    by {{post.user.username}} on {{post.created_at}}
+    {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a> --}}
+    </div>
+</article>
+
+{{!-- add comments form --}}
+{{#if loggedIn}}
+<form class="comment-form">
+    <h2>Hey {{ username }}, add a comment!</h2>
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{!-- displays comments --}}
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
