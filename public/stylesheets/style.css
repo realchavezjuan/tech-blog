@@ -29,7 +29,40 @@ a {
 } 
 
 a:hover {
-    color: #3486eb;
+    color: steelblue;
+}
+
+article a{
+    font-size: large;
+}
+
+article span {
+    font-size: larger;
+}
+
+.date{
+    font-size: smaller;
+    color: white;
+    background-color: steelblue;
+}
+
+.username{
+    font-size: large;
+    letter-spacing: 3px;
+    margin:0;
+    padding: 5px 0 5px 0;
+    color: white;
+    background-color: steelblue;
+}
+
+article .title {
+    border-bottom: solid steelblue 3px;
+    border-top: solid steelblue 3px;
+}
+
+li {
+    border: solid 3px steelblue;
+    border-radius: 5px;
 }
 
 footer {

@@ -21,17 +21,22 @@
     {{#each posts as |post|}}
     <li>
       <article class="post">
-        <div class="title">
-          <a <a href="/post/{{post.id}}" target="_blank">{{post.title}}</a>
-          <span>{{post.post_url}}</span>
-        </div>
-        <div class="meta">
-          You posted this on {{post.created_at}}.
-          {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a> --}}
-        </div>
-      </article>
+      <h3 class="meta username">
+        {{post.user.username}} said: 
+      </h3>
+      <div class="title">
+        <a href="/post/{{post.id}}" target="_blank">{{post.title}}</a>
+        <br>
+        <span>{{post.post_url}}</span>
+      </div>
+      <div class="meta date">
+        on {{post.created_at}}
+        {{!-- <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a> --}}
+      </div>
+    </article>
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
+    <br>
     {{/each}}
   </ol>
 </section>
